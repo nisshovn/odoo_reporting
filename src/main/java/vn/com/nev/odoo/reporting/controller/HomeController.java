@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.nio.file.Paths;
+import java.util.List;
 import javax.servlet.http.HttpServletResponse;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -18,10 +19,13 @@ import org.springframework.core.env.Environment;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.util.FileCopyUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import vn.com.nev.odoo.reporting.common.Constants;
 import vn.com.nev.odoo.reporting.common.exception.NEException;
+import vn.com.nev.odoo.reporting.model.Partner;
+import vn.com.nev.odoo.reporting.service.PartnerService;
 
 @Controller
 public class HomeController {
@@ -31,8 +35,15 @@ public class HomeController {
   @Autowired
   private Environment environment;
 
+  @Autowired
+  private PartnerService partnerService;
+
   @GetMapping
-  public String index() {
+  public String index(Model model) {
+
+    List<Partner> partners = partnerService.findAll();
+    model.addAttribute("partners", partners);
+
     return "home/index";
   }
 

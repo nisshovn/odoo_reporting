@@ -2,6 +2,7 @@ package vn.com.nev.odoo.reporting.common;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Map;
 
 public class NEUtils {
   /**
@@ -12,5 +13,13 @@ public class NEUtils {
     dateFormat.setLenient(false);
 
     return dateFormat.format(date);
+  }
+
+  public static int getInt(Map<String, Object> dataRow, ColumnNames columnName) {
+    return Integer.parseInt(dataRow.get(columnName.toString()).toString());
+  }
+
+  public static String getString(Map<String, Object> dataRow, ColumnNames columnName) {
+    return (String) dataRow.get(columnName.toString());
   }
 }
