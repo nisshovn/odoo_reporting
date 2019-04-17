@@ -187,7 +187,7 @@ public class TsReportServiceImpl implements TsReportService {
     private void setCellNumber(int colIndex, Row row, String strVal) {
         // Write value if not null or Empty
         if (strVal != null && !strVal.isEmpty())
-            getCell(row, colIndex).setCellValue(Integer.parseInt(strVal));
+            getCell(row, colIndex).setCellValue(Float.parseFloat(strVal));
     }
 
     private DocumentResponse generatePurchaseReport(String templatePath) {
