@@ -22,6 +22,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.nio.file.Paths;
 import java.util.List;
+import java.util.Objects;
 
 @Repository
 public class TsReportServiceImpl implements TsReportService {
@@ -62,7 +63,7 @@ public class TsReportServiceImpl implements TsReportService {
         if (!records.isEmpty()) {
             Resource resource = new ClassPathResource(templatePath);
             final String outFilename = String.format("%s_%s", "Sales", ReportTemplate.TS_REPORT);
-            final String outputPath = Paths.get(environment.getProperty("application.path.output"), outFilename).toString();
+            final String outputPath = Paths.get(Objects.requireNonNull(environment.getProperty("application.path.output")), outFilename).toString();
 
             try (Workbook workbook = WorkbookFactory.create(resource.getInputStream())) {
 
@@ -137,21 +138,21 @@ public class TsReportServiceImpl implements TsReportService {
         setCell(colIndex++, row, record.getRtypb());  // Col: RTYPB
         setCell(colIndex++, row, record.getTrn());  // Col: TRN
         setCell(colIndex++, row, record.getFccd2());  // Col: FCCD2
-        setCell(colIndex++, row, record.getFcam2());  // Col: FCAM2
-        setCell(colIndex++, row, record.getFxrt2());  // Col: FXRT2
+        setCellNumber(colIndex++, row, record.getFcam2());  // Col: FCAM2
+        setCellNumber(colIndex++, row, record.getFxrt2());  // Col: FXRT2
         setCell(colIndex++, row, record.getDrac());  // Col: DRAC
-        setCell(colIndex++, row, record.getLamt());  // Col: LAMT
+        setCellNumber(colIndex++, row, record.getLamt());  // Col: LAMT
         setCell(colIndex++, row, record.getCrac());  // Col: CRAC
-        setCell(colIndex++, row, record.getQty());  // Col: QTY
+        setCellNumber(colIndex++, row, record.getQty());  // Col: QTY
         setCell(colIndex++, row, record.getQtyun());  // Col: QTYUN
         setCell(colIndex++, row, record.getGstmk());  // Col: GSTMK
         setCell(colIndex++, row, record.getGstcd());  // Col: GSTCD
         setCell(colIndex++, row, record.getTaxmt());  // Col: TAXMT
         setCell(colIndex++, row, record.getGstrt());  // Col: GSTRT
         setCell(colIndex++, row, record.getOrgac());  // Col: ORGAC
-        setCell(colIndex++, row, record.getSfxrt());  // Col: SFXRT
-        setCell(colIndex++, row, record.getSivam());  // Col: SIVAM
-        setCell(colIndex++, row, record.getSgsam());  // Col: SGSAM
+        setCellNumber(colIndex++, row, record.getSfxrt());  // Col: SFXRT
+        setCellNumber(colIndex++, row, record.getSivam());  // Col: SIVAM
+        setCellNumber(colIndex++, row, record.getSgsam());  // Col: SGSAM
         setCell(colIndex++, row, record.getRisk());  // Col: RISK
         setCell(colIndex++, row, record.getCrrnt());  // Col: CRRNT
         setCell(colIndex++, row, record.getIntcd());  // Col: INTCD
@@ -178,8 +179,15 @@ public class TsReportServiceImpl implements TsReportService {
     }
 
     private void setCell(int colIndex, Row row, String strVal) {
+        // Write value if not null or Empty
         if (strVal != null && !strVal.isEmpty())
             getCell(row, colIndex).setCellValue(strVal);
+    }
+
+    private void setCellNumber(int colIndex, Row row, String strVal) {
+        // Write value if not null or Empty
+        if (strVal != null && !strVal.isEmpty())
+            getCell(row, colIndex).setCellValue(Integer.parseInt(strVal));
     }
 
     private DocumentResponse generatePurchaseReport(String templatePath) {
