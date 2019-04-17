@@ -100,81 +100,86 @@ public class TsReportServiceImpl implements TsReportService {
         }
 
         // Write value for each cell in row
-        getCell(row, colIndex++).setCellValue(record.getOfccd());  // Col: OFCCD
-        getCell(row, colIndex++).setCellValue(record.getDept());  // Col: DEPT
-        getCell(row, colIndex++).setCellValue(record.getApl());  // Col: APL
-        getCell(row, colIndex++).setCellValue(record.getStype());  // Col: STYPE
-        getCell(row, colIndex++).setCellValue(record.getDtaid());  // Col: DTAID
-        getCell(row, colIndex++).setCellValue(record.getBtr());  // Col: BTR
-        getCell(row, colIndex++).setCellValue(record.getFcnty());  // Col: FCNTY
-        getCell(row, colIndex++).setCellValue(record.getTcnty());  // Col: TCNTY
-        getCell(row, colIndex++).setCellValue(record.getMcust());  // Col: MCUST
-        getCell(row, colIndex++).setCellValue(record.getTsect());  // Col: TSECT
-        getCell(row, colIndex++).setCellValue(record.getLino());  // Col: LINO
-        getCell(row, colIndex++).setCellValue(record.getAtno());  // Col: ATNO
-        getCell(row, colIndex++).setCellValue(record.getCont());  // Col: CONT
-        getCell(row, colIndex++).setCellValue(record.getOrdr());  // Col: ORDR
-        getCell(row, colIndex++).setCellValue(record.getActyy());  // Col: ACTYY
-        getCell(row, colIndex++).setCellValue(record.getActmm());  // Col: ACTMM
-        getCell(row, colIndex++).setCellValue(record.getActdd());  // Col: ACTDD
-        getCell(row, colIndex++).setCellValue(record.getInvno());  // Col: INVNO
-        getCell(row, colIndex++).setCellValue(record.getInvyy());  // Col: INVYY
-        getCell(row, colIndex++).setCellValue(record.getInvmm());  // Col: INVMM
-        getCell(row, colIndex++).setCellValue(record.getInvdd());  // Col: INVDD
-        getCell(row, colIndex++).setCellValue(record.getCmdty());  // Col: CMDTY
-        getCell(row, colIndex++).setCellValue(record.getWhcd());  // Col: WHCD
-        getCell(row, colIndex++).setCellValue(record.getPytrm());  // Col: PYTRM
-        getCell(row, colIndex++).setCellValue(record.getDueyy());  // Col: DUEYY
-        getCell(row, colIndex++).setCellValue(record.getDuemm());  // Col: DUEMM
-        getCell(row, colIndex++).setCellValue(record.getDuedd());  // Col: DUEDD
-        getCell(row, colIndex++).setCellValue(record.getBank());  // Col: BANK
-        getCell(row, colIndex++).setCellValue(record.getChqno());  // Col: CHQNO
-        getCell(row, colIndex++).setCellValue(record.getDraft());  // Col: DRAFT
-        getCell(row, colIndex++).setCellValue(record.getDscrp());  // Col: DSCRP
-        getCell(row, colIndex++).setCellValue(record.getGname());  // Col: GNAME
-        getCell(row, colIndex++).setCellValue(record.getAtnby());  // Col: ATNBY
-        getCell(row, colIndex++).setCellValue(record.getAtnon());  // Col: ATNON
-        getCell(row, colIndex++).setCellValue(record.getRtypb());  // Col: RTYPB
-        getCell(row, colIndex++).setCellValue(record.getTrn());  // Col: TRN
-        getCell(row, colIndex++).setCellValue(record.getFccd2());  // Col: FCCD2
-        getCell(row, colIndex++).setCellValue(record.getFcam2());  // Col: FCAM2
-        getCell(row, colIndex++).setCellValue(record.getFxrt2());  // Col: FXRT2
-        getCell(row, colIndex++).setCellValue(record.getDrac());  // Col: DRAC
-        getCell(row, colIndex++).setCellValue(record.getLamt());  // Col: LAMT
-        getCell(row, colIndex++).setCellValue(record.getCrac());  // Col: CRAC
-        getCell(row, colIndex++).setCellValue(record.getQty());  // Col: QTY
-        getCell(row, colIndex++).setCellValue(record.getQtyun());  // Col: QTYUN
-        getCell(row, colIndex++).setCellValue(record.getGstmk());  // Col: GSTMK
-        getCell(row, colIndex++).setCellValue(record.getGstcd());  // Col: GSTCD
-        getCell(row, colIndex++).setCellValue(record.getTaxmt());  // Col: TAXMT
-        getCell(row, colIndex++).setCellValue(record.getGstrt());  // Col: GSTRT
-        getCell(row, colIndex++).setCellValue(record.getOrgac());  // Col: ORGAC
-        getCell(row, colIndex++).setCellValue(record.getSfxrt());  // Col: SFXRT
-        getCell(row, colIndex++).setCellValue(record.getSivam());  // Col: SIVAM
-        getCell(row, colIndex++).setCellValue(record.getSgsam());  // Col: SGSAM
-        getCell(row, colIndex++).setCellValue(record.getRisk());  // Col: RISK
-        getCell(row, colIndex++).setCellValue(record.getCrrnt());  // Col: CRRNT
-        getCell(row, colIndex++).setCellValue(record.getIntcd());  // Col: INTCD
-        getCell(row, colIndex++).setCellValue(record.getIntam());  // Col: INTAM
-        getCell(row, colIndex++).setCellValue(record.getIntrt());  // Col: INTRT
-        getCell(row, colIndex++).setCellValue(record.getDays());  // Col: DAYS
-        getCell(row, colIndex++).setCellValue(record.getCtyp());  // Col: CTYP
-        getCell(row, colIndex++).setCellValue(record.getStryy());  // Col: STRYY
-        getCell(row, colIndex++).setCellValue(record.getStrmm());  // Col: STRMM
-        getCell(row, colIndex++).setCellValue(record.getStrdd());  // Col: STRDD
-        getCell(row, colIndex++).setCellValue(record.getEndyy());  // Col: ENDYY
-        getCell(row, colIndex++).setCellValue(record.getEndmm());  // Col: ENDMM
-        getCell(row, colIndex++).setCellValue(record.getEnddd());  // Col: ENDDD
-        getCell(row, colIndex++).setCellValue(record.getBdept());  // Col: BDEPT
-        getCell(row, colIndex++).setCellValue(record.getBcust());  // Col: BCUST
-        getCell(row, colIndex++).setCellValue(record.getBcont());  // Col: BCONT
-        getCell(row, colIndex++).setCellValue(record.getEdpno());  // Col: EDPNO
-        getCell(row, colIndex++).setCellValue(record.getItmc1());  // Col: ITMC1
-        getCell(row, colIndex++).setCellValue(record.getItmn1());  // Col: ITMN1
-        getCell(row, colIndex++).setCellValue(record.getItmc2());  // Col: ITMC2
-        getCell(row, colIndex++).setCellValue(record.getItmn2());  // Col: ITMN2
-        getCell(row, colIndex++).setCellValue(record.getItmc3());  // Col: ITMC3
-        getCell(row, colIndex).setCellValue(record.getItmn3());  // Col: ITMN3
+        setCell(colIndex++, row, record.getOfccd());  // Col: OFCCD
+        setCell(colIndex++, row, record.getDept());  // Col: DEPT
+        setCell(colIndex++, row, record.getApl());  // Col: APL
+        setCell(colIndex++, row, record.getStype());  // Col: STYPE
+        setCell(colIndex++, row, record.getDtaid());  // Col: DTAID
+        setCell(colIndex++, row, record.getBtr());  // Col: BTR
+        setCell(colIndex++, row, record.getFcnty());  // Col: FCNTY
+        setCell(colIndex++, row, record.getTcnty());  // Col: TCNTY
+        setCell(colIndex++, row, record.getMcust());  // Col: MCUST
+        setCell(colIndex++, row, record.getTsect());  // Col: TSECT
+        setCell(colIndex++, row, record.getLino());  // Col: LINO
+        setCell(colIndex++, row, record.getAtno());  // Col: ATNO
+        setCell(colIndex++, row, record.getCont());  // Col: CONT
+        setCell(colIndex++, row, record.getOrdr());  // Col: ORDR
+        setCell(colIndex++, row, record.getActyy());  // Col: ACTYY
+        setCell(colIndex++, row, record.getActmm());  // Col: ACTMM
+        setCell(colIndex++, row, record.getActdd());  // Col: ACTDD
+        setCell(colIndex++, row, record.getInvno());  // Col: INVNO
+        setCell(colIndex++, row, record.getInvyy());  // Col: INVYY
+        setCell(colIndex++, row, record.getInvmm());  // Col: INVMM
+        setCell(colIndex++, row, record.getInvdd());  // Col: INVDD
+        setCell(colIndex++, row, record.getCmdty());  // Col: CMDTY
+        setCell(colIndex++, row, record.getWhcd());  // Col: WHCD
+        setCell(colIndex++, row, record.getPytrm());  // Col: PYTRM
+        setCell(colIndex++, row, record.getDueyy());  // Col: DUEYY
+        setCell(colIndex++, row, record.getDuemm());  // Col: DUEMM
+        setCell(colIndex++, row, record.getDuedd());  // Col: DUEDD
+        setCell(colIndex++, row, record.getBank());  // Col: BANK
+        setCell(colIndex++, row, record.getChqno());  // Col: CHQNO
+        setCell(colIndex++, row, record.getDraft());  // Col: DRAFT
+        setCell(colIndex++, row, record.getDscrp());  // Col: DSCRP
+        setCell(colIndex++, row, record.getGname());  // Col: GNAME
+        setCell(colIndex++, row, record.getAtnby());  // Col: ATNBY
+        setCell(colIndex++, row, record.getAtnon());  // Col: ATNON
+        setCell(colIndex++, row, record.getRtypb());  // Col: RTYPB
+        setCell(colIndex++, row, record.getTrn());  // Col: TRN
+        setCell(colIndex++, row, record.getFccd2());  // Col: FCCD2
+        setCell(colIndex++, row, record.getFcam2());  // Col: FCAM2
+        setCell(colIndex++, row, record.getFxrt2());  // Col: FXRT2
+        setCell(colIndex++, row, record.getDrac());  // Col: DRAC
+        setCell(colIndex++, row, record.getLamt());  // Col: LAMT
+        setCell(colIndex++, row, record.getCrac());  // Col: CRAC
+        setCell(colIndex++, row, record.getQty());  // Col: QTY
+        setCell(colIndex++, row, record.getQtyun());  // Col: QTYUN
+        setCell(colIndex++, row, record.getGstmk());  // Col: GSTMK
+        setCell(colIndex++, row, record.getGstcd());  // Col: GSTCD
+        setCell(colIndex++, row, record.getTaxmt());  // Col: TAXMT
+        setCell(colIndex++, row, record.getGstrt());  // Col: GSTRT
+        setCell(colIndex++, row, record.getOrgac());  // Col: ORGAC
+        setCell(colIndex++, row, record.getSfxrt());  // Col: SFXRT
+        setCell(colIndex++, row, record.getSivam());  // Col: SIVAM
+        setCell(colIndex++, row, record.getSgsam());  // Col: SGSAM
+        setCell(colIndex++, row, record.getRisk());  // Col: RISK
+        setCell(colIndex++, row, record.getCrrnt());  // Col: CRRNT
+        setCell(colIndex++, row, record.getIntcd());  // Col: INTCD
+        setCell(colIndex++, row, record.getIntam());  // Col: INTAM
+        setCell(colIndex++, row, record.getIntrt());  // Col: INTRT
+        setCell(colIndex++, row, record.getDays());  // Col: DAYS
+        setCell(colIndex++, row, record.getCtyp());  // Col: CTYP
+        setCell(colIndex++, row, record.getStryy());  // Col: STRYY
+        setCell(colIndex++, row, record.getStrmm());  // Col: STRMM
+        setCell(colIndex++, row, record.getStrdd());  // Col: STRDD
+        setCell(colIndex++, row, record.getEndyy());  // Col: ENDYY
+        setCell(colIndex++, row, record.getEndmm());  // Col: ENDMM
+        setCell(colIndex++, row, record.getEnddd());  // Col: ENDDD
+        setCell(colIndex++, row, record.getBdept());  // Col: BDEPT
+        setCell(colIndex++, row, record.getBcust());  // Col: BCUST
+        setCell(colIndex++, row, record.getBcont());  // Col: BCONT
+        setCell(colIndex++, row, record.getEdpno());  // Col: EDPNO
+        setCell(colIndex++, row, record.getItmc1());  // Col: ITMC1
+        setCell(colIndex++, row, record.getItmn1());  // Col: ITMN1
+        setCell(colIndex++, row, record.getItmc2());  // Col: ITMC2
+        setCell(colIndex++, row, record.getItmn2());  // Col: ITMN2
+        setCell(colIndex++, row, record.getItmc3());  // Col: ITMC3
+        setCell(colIndex, row, record.getItmn3());  // Col: ITMN3
+    }
+
+    private void setCell(int colIndex, Row row, String strVal) {
+        if (strVal != null && !strVal.isEmpty())
+            getCell(row, colIndex).setCellValue(strVal);
     }
 
     private DocumentResponse generatePurchaseReport(String templatePath) {
